@@ -6,7 +6,7 @@ public class Hammer : MonoBehaviour
 
     [SerializeField] private Animator whack;
 
-    [SerializeField] private bool isHitting;
+    [SerializeField] public bool isHitting;
 
     private void Start()
     {
