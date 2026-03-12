@@ -10,6 +10,11 @@ public class being_thrown : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        if(target == null)
+        {
+            target = transform;
+        }
         Vector3 direction = target.position - transform.position;
         direction.y = 0;
 
