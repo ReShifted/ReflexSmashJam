@@ -23,13 +23,21 @@ public class bad_object : MonoBehaviour
             Destroy(gameObject);
             Destroy(particlesinct, expireTime);
             gotHit = false;
-            manager.AddCoins(10);
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        gotHit = true;
-        
+        if (CompareTag("Hammer"))
+        {
+            manager.AddCoins(10);
+            gotHit = true;
+        }
+        else
+        {
+            manager.AddCoins(-5);
+        }
+
+
     }
 }
