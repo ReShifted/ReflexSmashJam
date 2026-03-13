@@ -10871,10 +10871,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1471358798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -267, y: 182}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -805, y: 480}
+  m_SizeDelta: {x: -1720, y: -1030}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1560563670
 MonoBehaviour:
@@ -16105,11 +16105,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3615708900955118799, guid: 980b7b7022794d54182aab926b3df6f0, type: 3}
       propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615708900955118799, guid: 980b7b7022794d54182aab926b3df6f0, type: 3}
+      propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7297335024661489083, guid: 980b7b7022794d54182aab926b3df6f0, type: 3}
       propertyPath: m_Name
       value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297335024661489083, guid: 980b7b7022794d54182aab926b3df6f0, type: 3}
+      propertyPath: m_TagString
+      value: blocker
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

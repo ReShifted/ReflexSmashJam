@@ -22,7 +22,7 @@ public class RandomSpawner : MonoBehaviour
 
         if (Random.value < 0.5f)
         {
-            objectToSpawn = objectA;
+            objectToSpawn = objectC;
         }
         else if(Random.value > 0.5f &&  Random.value < 1.0f)
         {
@@ -30,7 +30,7 @@ public class RandomSpawner : MonoBehaviour
         }
         else
         {
-            objectToSpawn = objectC;    
+            objectToSpawn = objectA;    
         }
 
         Vector3 randomPosition = new Vector3(

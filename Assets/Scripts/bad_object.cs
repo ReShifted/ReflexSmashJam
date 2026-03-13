@@ -20,7 +20,6 @@ public class bad_object : MonoBehaviour
         if (gotHit)
         {
             GameObject particlesinct = Instantiate(particals, transform.position, Quaternion.identity);
-            Destroy(gameObject);
             Destroy(particlesinct, expireTime);
             gotHit = false;
         }
@@ -28,14 +27,16 @@ public class bad_object : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (CompareTag("Hammer"))
+        if (other.CompareTag("Hammer"))
         {
             manager.AddCoins(10);
             gotHit = true;
+            Destroy(gameObject);
         }
-        else
+        else if(other.CompareTag("Pillow") || other.CompareTag("blocker"))
         {
             manager.AddCoins(-5);
+            Destroy(gameObject);
         }
 
 

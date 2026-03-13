@@ -130,8 +130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::being_thrown
   rb: {fileID: -3758196398750280864}
-  throwForce: 10
-  upForce: 5
+  throwForce: 50
+  upForce: 14
 --- !u!54 &-3758196398750280864
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using UnityEngine;
 public class good_object : MonoBehaviour
 {
     [SerializeField] private GameManager manager;
+    [SerializeField] private bool gotHit = false;
 
     private void Start()
     {
@@ -11,16 +12,17 @@ public class good_object : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (CompareTag("Pillow"))
+        if (other.CompareTag("Pillow"))
         {
             manager.AddCoins(10);
+            gotHit = true;
             Destroy(gameObject);
         }
-        else
+        else if (other.CompareTag("Hammer") || other.CompareTag("blocker"))
         {
             manager.AddCoins(-5);
             Destroy(gameObject);
         }
-            
+
     }
 }
