@@ -4,6 +4,7 @@ public class RandomSpawner : MonoBehaviour
 {
     public GameObject objectA;
     public GameObject objectB;
+    public GameObject objectC;
 
     public float spawnInterval = 2f;
 
@@ -23,9 +24,13 @@ public class RandomSpawner : MonoBehaviour
         {
             objectToSpawn = objectA;
         }
-        else
+        else if(Random.value > 0.5f &&  Random.value < 1.0f)
         {
             objectToSpawn = objectB;
+        }
+        else
+        {
+            objectToSpawn = objectC;    
         }
 
         Vector3 randomPosition = new Vector3(
